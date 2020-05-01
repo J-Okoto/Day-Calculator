@@ -1,5 +1,5 @@
 h1{color:blue;
 text-align: center;}
-h2{text-align: left;;}
-img {float:right;
-  
+h2{color:inherit;
+text-align: center;}
+.myHalfCol .col-lg-6{width:48%; margin:0 1% /* or auto */;}
