@@ -5,8 +5,9 @@
      <link href="css/bootstrap.css"rel="stylesheet"type="text/css">
       <link href="css/styles.css" rel="stylesheet type="text/css">
   </head>
-  <body>
-    <div class="container">
+
+<body>
+   <div class="container">
       <div class="jumbotron">
         <h1>Day Calculator</h1>
            <p>Day Calculator is a web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name.</p>
@@ -16,85 +17,81 @@
           <div class="col-md-12">
             <h1>Are you from Ghana or do you follow Ghananian Culture?</h1>
 
-             <h2>What Day of The Week Were You Born On?
-             </h2>
+             <h2>What Day of The Week Were You Born On?</h2>
 
-               <p>We can guarantee that there is a 1 in 7 chance you were born on a Monday! Even better, a 5 in 7 chance that you were born on a weekday.  Our Day of Birth Calculator is a fun way to reminisce about the precise day you entered the world.So, do you know your weekday of birth? Do you know that your name corresponds to a particular day of week that you were born?
-               </p>
+                 <p>We can guarantee that there is a 1 in 7 chance you were born on a Monday! Even better, a 5 in 7 chance that you were born on a weekday.  Our Day of Birth Calculator is a fun way to reminisce about the precise day you entered the world.So, do you know your weekday of birth? Do you know that your name corresponds to a particular day of week that you were born?
+                 </p>
 
-
-
-
-        </div>
+          </div>
        </div>
 
-          <div class="row">
+      <div class="row">
+          <div class="col-md-5">
 
-           <div class="col-md-5">
-
-             <strong
+               <strong
               <p> Use this simple birthday calculator to find the day of the week of birth and your Akan name,based on Akan naming system.</p>
-             </strong>
-  <div class="Day-Calculator form"
-             <form class="was-validated">
-             <div class="mb-3">
-               <label for="validationTextarea">Date of Birth</label>
-               <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Date of birth e.g 20/11/1990" required></textarea>
-               <div class="invalid-feedback">
-                 Please enter date of birth.
-               </div>
-             </div>
-               <p>Select Your Gender</p>
-               <div class="custom-control custom-radio">
-                 <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                 <label class="custom-control-label" for="customRadio1">Male</label>
-               </div>
-               <div class="custom-control custom-radio">
-                 <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                 <label class="custom-control-label" for="customRadio2">Female</label>
-               </div>
-                   <button class="btn btn-primary" type="submit">Submit form</button>
-             </form>
- </div>
+               </strong>
+                   <h3>Enter your Birthdate Here:</h3>
+
+          <form >
+              <div class="form-group mb15">
+                 <label class="birthday">Birthday:</label>
+                   <input type="date" id="birthday" name="birthday">
+              </div>
+                   <div class="form-group mb15">
+               			   <label class="label">Gender</label>
+               			        <div class="rdio rdio-default fs11">
+               		              <input type="radio" name="gender" id="male" value="Male">
+               		                  <label for="male">Male</label>
+                  </div>
+               		    <div class="rdio rdio-default fs11">
+               		        <input type="radio" name="gender" value="Female" id="female">
+               		            <label for="female">Female</label>
+               		    </div>
+                    </div>
+               			      <button type="submit" onclick="getAkanName(); return false;" class="btn btn-primary btn-xs">Get Akan Name</button>
+               			          <button type="reset" onclick="clearAkanMessage(); return false;" class="btn btn-default btn-xs">Cancel</button>
+          </form>
+
 <hr>
-				<div class="your-akan-name">
-					<p id="message" class="output"></p>
+				  <div class="your-akan-name">
+					  <p id="message" class="output"></p>
 
+          </div>
+
+    </div>
+
+    <div class="main col-md-7">
+        <div class="row">
+           <h3 class="akan-heading">Akan<span class="heading-name">Names</span></h3>
+                  <strong> <p>Akan names </strong>are derived from Ghanian culture. Frequently in Ghana,    children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</p>
+          <div class="col-lg-6">
+                <p><class=" male"> Male names:</p>
+                  <ul>
+                    <li>Sunday: Kwasi</li>
+                    <li>Monday: Kwadwo</li>
+                    <li>Tuesday: Kwabena</li>
+                    <li>Wednesday: Kwaku</li>
+                    <li>Thursday:  Yaw</li>
+                    <li>Friday: Kofi</li>
+                    <li>Saturday: Kwame</li>
+                  </ul>
         </div>
 
-        </div>
-
-
-                <div class="main col-md-7">
-<div class="row">
-                   <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</p>
-<div class="col-lg-6">
-                      <p>Male are given names as follows:</p>
-                       <ul>
-                        <li>Sunday: Kwasi</li>
-                        <li>Monday: Kwadwo</li>
-                        <li>Tuesday: Kwabena</li>
-                        <li>Wednesday: Kwaku</li>
-                        <li>Thursday:  Yaw</li>
-                        <li>Friday: Kofi</li>
-                        <li>Saturday: Kwame</li>
-                        </ul>
+         <div class="col-lg-6">
+               <p><class="female">Female names:</p>
+                    <ul>
+                    <li>Sunday:Akosua</li>
+                    <li>Monday: Adwoa</li >
+                    <li>Tuesday: Abenaa</li>
+                    <li>Wednesday: Akua</li>
+                    <li>Thursday:  Yaa</li>
+                    <li>Friday: Afua</li>
+                    <li>Saturday: Ama</li>
+                  </ul>
+         </div>
+   </div>
 </div>
-
-<div class="col-lg-6">
-                            <p>Female are given names as follows:</p>
-                              <ul>
-                                <li>Sunday:Akosua</li>
-                                <li>Monday: Adwoa</li >
-                                <li>Tuesday: Abenaa</li>
-                                <li>Wednesday: Akua</li>
-                                <li>Thursday:  Yaa</li>
-                                <li>Friday: Afua</li>
-                                <li>Saturday: Ama</li>
-                                </ul>
-  </div>
-</div>
-                </div>
         </div>
 
              <div class="card">
@@ -102,28 +99,33 @@
                  <div class="card bg-primary">
                    <div class="card-body text-center">
                      <p class="card-text">Kwasi/Akosua</p>
-                   </div>
-                 </div>
+              </div>
+            </div>
+
                  <div class="card bg-warning">
                    <div class="card-body text-center">
                      <p class="card-text">Kwadwo/Adwoa</p>
                    </div>
                  </div>
+
                  <div class="card bg-success">
                    <div class="card-body text-center">
                      <p class="card-text">Kwabena/Abenaa</p>
                    </div>
                  </div>
+
                  <div class="card bg-danger">
                    <div class="card-body text-center">
                      <p class="card-text">Kwaku/Akua</p>
                    </div>
                  </div>
+
                  <div class="card bg-light">
                    <div class="card-body text-center">
                      <p class="card-text">Yaw/Yaa</p>
                    </div>
                  </div>
+
                  <div class="card bg-info">
                    <div class="card-body text-center">
                      <p class="card-text">Kofi/Afua</p>
@@ -132,21 +134,35 @@
                </div>
 
 
+         <div class="card-footer">
+            <p>Rights reserved.If you have any problems using Birthday   Calculator,please contact me.
+                <a href="https://github.com/J-Okoto/">Joel Okoto</a></p>
 
-
-                 <div class="card-footer">
-
-                   <p>Rights reserved.If you have any problems using Birthday   Calculator,please contact me.
-                   <a href="https://github.com/J-Okoto/">Joel Okoto</a></p>
-
-                 </div>
+                </div>
              </div>
-    </div>
-
+     </div>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
 
-<div class="card-body">
-
-  <img class="card-img-img fluid" src="Images/names3.jpg" alt="Card image cap">
+*//
+<form>
+<div class="mb-3">
+  <label for="validationTextarea">Date of Birth</label>
+  <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Date of birth e.g 20/11/1990" required></textarea>
+  <div class="invalid-feedback">
+    Please enter date of birth.
+  </div>
 </div>
+  <p>Select Your Gender</p>
+  <div class="custom-control custom-radio">
+    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+    <label class="custom-control-label" for="customRadio1">Male</label>
+  </div>
+  <div class="custom-control custom-radio">
+    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+    <label class="custom-control-label" for="customRadio2">Female</label>
+  </div>
+      <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+//*
