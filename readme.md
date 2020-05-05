@@ -3,23 +3,23 @@
 
 A web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name. Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born.
 
-##Technologies Used
+## Technologies Used
 
 1.HTML & CSS (Bootstrap)
 2.JavaScript (jQuery 3.4.1)
 
-##Requirements
+## Requirements
 
 1.JSFiddle or
 2.JavaScript Console
 
-##Setup Instructions and Installation
+## Setup Instructions and Installation
 
 1.Clone this repository to a location in your file system. git clone https://github.com/J.Okoto/Day-Calculator.git
 2.Open terminal command line then navigate to the root folder of the application. cd Akan-Names
 3.Open index.html on your Browser.
 
-##License
+## License
 
 MIT Copyright (c) 2020 Joel Okoto
 
