@@ -8,9 +8,14 @@
   </head>
 
 <body>
-<script src="js/scripts.js"></script>
+
 
    <div class="container">
+     <p>Click a button to choose what color you'd like this page to be:</p>
+
+            <button class="btn btn-success" id="green">Green</button>
+            <button class="btn btn-warning" id="yellow">Yellow</button>
+            <button class="btn btn-danger" id="red">Red</button>
       <div class="jumbotron">
         <h1>Day Calculator</h1>
            <p>Day Calculator is a web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name.</p>
@@ -58,7 +63,7 @@
                		            <label for="female">Female</label>
                		    </div>
                     </div>
-               			      <button type="submit" onclick="getAkanName(); return false;" class="btn btn-primary btn-xs">Get Akan Name</button>
+               			      <button type="submit" onclick="displayAkanName(); return false;" class="btn btn-primary btn-xs">Get Akan Name</button>
                			          <button type="reset" onclick="clearAkanMessage(); return false;" class="btn btn-default btn-xs">Cancel</button>
           </form>
 
@@ -153,6 +158,7 @@
              </div>
      </div>
 
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
   </body>
 </html>
