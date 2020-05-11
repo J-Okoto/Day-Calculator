@@ -2,14 +2,15 @@ h1{color:blue;
 text-align: center;}
 h2{color:inherit;
 text-align: center;}
+
 .green-background {
-        background-color: green;
-      }
+       background-color: green;
+     }
 
-      .yellow-background {
-        background-color: yellow;
-      }
+     .yellow-background {
+       background-color: yellow;
+     }
 
-      .red-background {
-        background-color: red;
-      }
+     .red-background {
+       background-color: red;
+     }

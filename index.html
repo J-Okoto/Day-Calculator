@@ -3,17 +3,19 @@
   <head>
     <title>Day Calculator</title>
      <link href="css/bootstrap.css"rel="stylesheet"type="text/css">
-      <link href="css/styles.css" rel="stylesheet type="text/css">
-
+ <link href="css/styles.css" rel="stylesheet type="text/css">
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+ <script src="js/scripts.js"></script>
   </head>
 
 <body>
 
 
+
    <div class="container">
      <p>Click a button to choose what color you'd like this page to be:</p>
 
-            <button class="btn btn-success" id="green">Green</button>
+          <button class="btn btn-success" id="green">Green</button>
             <button class="btn btn-warning" id="yellow">Yellow</button>
             <button class="btn btn-danger" id="red">Red</button>
       <div class="jumbotron">
@@ -35,54 +37,56 @@
 
       <div class="row">
 
-          <div class="col-md-6">
+          <div class="col-md-5">
 
                <strong
               <p> Use this simple birthday calculator to find the day of the week of birth and your Akan name,based on Akan naming system.</p>
                </strong>
                    <h3>Enter your Birthdate Here:</h3>
-    <form >
-                <div class="add-stylist-form">
 
-                  <div class="form-group mb15">
+              <div class="add-stylist-form">
+                  <form>
+                   <div class="form-group mb15">
                     <label class="label">Birthday</label>
                     <div class="input-group mb15">
-                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                      <input type="date" placeholder="mm/dd/yyyy" id="myBirthDate" class="form-control" autocomplete="off">
+                      <input type="date" placeholder="11/20/2000" id="myBirthDate" class="form-control" autocomplete="off">
+
                    </div>
                  </div>
 
                    <div class="form-group mb15">
                			   <label class="label">Gender</label>
                			        <div class="rdio rdio-default fs11">
-               		              <input type="radio" name="gender" id="male" value="Male">
+               		              <input type="radio" name="gender" id="male"required value="Male">
                		                  <label for="male">Male</label>
                   </div>
                		    <div class="rdio rdio-default fs11">
-               		        <input type="radio" name="gender" value="Female" id="female">
+               		        <input type="radio" name="gender" required value="Female" id="female">
                		            <label for="female">Female</label>
                		    </div>
                     </div>
-               			      <button type="submit" onclick="displayAkanName(); return false;" class="btn btn-primary btn-xs">Get Akan Name</button>
-               			          <button type="reset" onclick="clearAkanMessage(); return false;" class="btn btn-default btn-xs">Cancel</button>
-          </form>
-
-</div>
-
-<hr>
-				  <div class="your-akan-name">
-					  <p id="message" class="output"></p>
-
+               			      <button type="submit" onclick="displayAkanName(); return false;"class="btn btn-primary btn-xs">Get Akan Name</button>
+               			          <button type="reset" onclick="clearAkanMessage(); return false;" class="btn btn-default btn-s">Cancel</button>
+              </form>
           </div>
+                              <hr>
 
-    </div>
+                                        <div class="your-akan-name">
+                                          <p id="message" class="output"></p>
+                                        </div>
 
 
-    <div class="main col-md-6">
+
+  </div>
+
+
+    <div class="main col-md-7">
         <div class="row">
-                  <strong> <p>Akan names </strong>are derived from Ghanian culture. Frequently in Ghana,    children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</p>
+          <h3 class="akan-heading">Akan <span class="heading-name">Names</span></h3>
+				<hr>
+			<strong> <p>Akan names </strong>are derived from Ghanian culture. Frequently in Ghana,    children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</p>
           <div class="col-lg-6">
-                <p><class=" male"> Male Akan names:</p>
+                <h4> <i class="fa fa-male"></i>Male:</h4>
                   <ul>
                     <li>Sunday: Kwasi</li>
                     <li>Monday: Kwadwo</li>
@@ -95,7 +99,7 @@
         </div>
 
          <div class="col-lg-6">
-               <p><class="female">Female Akan names:</p>
+               <h4><i class= "fa fa-female"></i>Female:</h4>
                     <ul>
                     <li>Sunday:Akosua</li>
                     <li>Monday: Adwoa</li >
@@ -105,10 +109,12 @@
                     <li>Friday: Afua</li>
                     <li>Saturday: Ama</li>
                   </ul>
-         </div>
-   </div>
+          </div>
+
+    </div>
+ </div>
+
 </div>
-        </div>
 
              <div class="card">
                <div class="card-columns">
@@ -148,7 +154,11 @@
                    </div>
                  </div>
                </div>
-
+               <div class="card bg-success">
+                 <div class="card-body text-center">
+                   <p class="card-text">Kwame/Ama</p>
+                 </div>
+               </div>
 
          <div class="card-footer">
             <p>Rights reserved.If you have any problems using Birthday   Calculator,please contact me.
@@ -158,7 +168,7 @@
              </div>
      </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script>
+
+
   </body>
-</html>
+  </html>

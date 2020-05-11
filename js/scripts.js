@@ -2,43 +2,33 @@
 
 
 
-function getAkanName(){
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-var maleAkanNames=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-var femaleAkanNames=["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+      function getAkanName(){
+          var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+          var maleAkanNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
+          var femaleAkanNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
+          var myBirthday = document.getElementById("myBirthDate").value;
+          var myGender = document.getElementsByName("gender");
+          var dateOfBirth = new Date(myBirthday);
+          var dayOfTheWeek = dateOfBirth.getDay();
+          if(myBirthday === ""){
+              document.getElementById('message').innerHTML = "<div class=\"alert alert-danger\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">x</button>You Didn't Submit a Valid Date!</div>";
+          }
+          else {
+              for(var i=0;i<myGender.length;i++){
+                  if(myGender[i].checked){
+                      if(myGender[i].value === "Male"){
+                          document.getElementById('message').innerHTML ="<span><i class=\"fa fa-male\"></i></span>&nbsp;&nbsp; Born on a <span>" + days[dayOfTheWeek] + "</span>, Your Akan Name's <span>" + maleAkanNames[dayOfTheWeek] + "</span>";
 
-var myBirthday=document.getElementById("myBirthDate").value;
-var dateOfBirth=new Date(myBirthday);
-var dayOfTheWeek=dateOfBirth.getDay();
 
-var myGender=document.getElementByName("gender");
-for(var i=0;i<myGender.length;i++){
-		if(myGender[i].checked){
-			if(myGender[i].value === "Male"){
-				document.getElementById("displayAkanName").innerHTML = maleAkanNames[dayOfTheWeek];
-			}
-      else if (myGender[i].value === "Female"){
-       document.getElementById("displayAkanName").innerHTML=femaleAkanNames[dayOfTheWeek];
-     }
-   }
- else {document.getElementById('message').innerHTML = "";
- }
-}
-}
-function clearAkanMessage(){
-    document.getElementById('message').innerHTML = "";
-}
+                      }
+                      else {
+                          document.getElementById('message').innerHTML = "<span><i class=\"fa fa-female\"></i></span>&nbsp;&nbsp; Born on a <span>" + days[dayOfTheWeek] + "</span>, Your Akan Name's <span>" + femaleAkanNames[dayOfTheWeek] + "</span>";
+                      }
+              }
+          }
+      }
 
-$(document).ready(function() {
-       $("button#green").click(function() {
-         $("body").addClass("green-background");
-       });
+      function clearAkanMessage(){
+          document.getElementById('message').innerHTML = "";
 
-       $("button#yellow").click(function() {
-         $("body").addClass("yellow-background");
-       });
-
-       $("button#red").click(function() {
-         $("body").addClass("red-background");
-       });
-     });
+      }
