@@ -1,34 +1,92 @@
+var submission = function() {
+  var daysOfTheWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  var maleNames = [
+    "Kwasi",
+    "Kwadwo",
+    "Kwabena",
+    "Kwaku",
+    "Yaw",
+    "Kofi",
+    "Kwame"
+  ];
+  var femaleNames = [
+    "Akosua",
+     " Adwoa",
+    "Abenaa",
+    "Akua",
+    "Yaa",
+    "Afua",
+    "Ama"
+  ];
+  var month = parseInt(document.getElementById("month").value);
+  var year = parseInt(document.getElementById("year").value);
+  var day = parseInt(document.getElementById("day").value);
+  var name =(document.getElementById("name").value);
+  var date0fbirth = new Date(year + "/" + month + "/" + day);
+  var results = date0fbirth.getDay();
+  var output = document.getElementById("output");
+  var male = document.getElementById("male")
+  var female = document.getElementById("female")
+
+  if (month =="" && year =="" && day =="" && name=="") {
+    alert("Please Enter you credentials");
+    return false;
+  }
 
 
 
+ if (year < 0) {
+    output.style.background ="red"
+    output.style.color= "white"
+    output.innerHTML = "Hey! " + name + " please enter a valid year! "
+}
 
-      function getAkanName(){
-          var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-          var maleAkanNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
-          var femaleAkanNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
-          var myBirthday = document.getElementById("myBirthDate").value;
-          var myGender = document.getElementsByName("gender");
-          var dateOfBirth = new Date(myBirthday);
-          var dayOfTheWeek = dateOfBirth.getDay();
-          if(myBirthday === ""){
-              document.getElementById('message').innerHTML = "<div class=\"alert alert-danger\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">x</button>You Didn't Submit a Valid Date!</div>";
-          }
-          else {
-              for(var i=0;i<myGender.length;i++){
-                  if(myGender[i].checked){
-                      if(myGender[i].value === "Male"){
-                          document.getElementById('message').innerHTML ="<span><i class=\"fa fa-male\"></i></span>&nbsp;&nbsp; Born on a <span>" + days[dayOfTheWeek] + "</span>, Your Akan Name's <span>" + maleAkanNames[dayOfTheWeek] + "</span>";
+else if ((month < 1) || (month > 31)) {
+    output.style.background ="red"
+    output.style.color= "white"
+    output.innerHTML = "Hey! " + name + " please enter a valid month! "
+}
+
+ else if (day < 0 || day > 31) {
+    output.style.background ="red"
+    output.style.color= "white"
+    output.innerHTML = "Hey! " + name + " please enter a valid day! "
+}
 
 
-                      }
-                      else {
-                          document.getElementById('message').innerHTML = "<span><i class=\"fa fa-female\"></i></span>&nbsp;&nbsp; Born on a <span>" + days[dayOfTheWeek] + "</span>, Your Akan Name's <span>" + femaleAkanNames[dayOfTheWeek] + "</span>";
-                      }
-              }
-          }
-      }
+  if(male.checked && year > 0 && month > 0 && month < 12 && day > 0 && day < 32) {
+    output.style.background ="lime"
+      output.innerHTML = "Hey! " + name + " you were born on a " + daysOfTheWeek[results] + " and your Akan name is " + maleNames[results];
+  }
+   else if(female.checked && year > 0 && month > 0 && month < 12 && day > 0 && day < 32) {
+    output.style.background ="lime"
+    output.style.background ="red"
+    output.innerHTML = "Hey! " + name + " you were born on a " + daysOfTheWeek[results] + " and your Akan name is " + femaleNames[results];
+}
 
-      function clearAkanMessage(){
-          document.getElementById('message').innerHTML = "";
+};
 
-      }
+$(document).ready(function() {
+        $("button#green").click(function() {
+          $("body").removeClass();
+          $("body").addClass("green-background");
+        });
+
+        $("button#yellow").click(function() {
+          $("body").removeClass();
+          $("body").addClass("yellow-background");
+        });
+
+        $("button#red").click(function() {
+          $("body").removeClass();
+          $("body").addClass("red-background");
+        });
+      });
